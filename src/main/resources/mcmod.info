@@ -1,0 +1,16 @@
+[
+{
+  "modid": "foodmod",
+  "name": "Food Mod",
+  "description": "Adds tons of food.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Ferdz"],
+  "credits": "Pikogan: textures and ideas",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

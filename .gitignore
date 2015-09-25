@@ -57,3 +57,18 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.classpath
+.gradle
+bin
+.project
+.settings
+build.gradle
+config
+logs
+saves
+README.txt
+gradlew
+gradlew.bat
+gradle
+options.txt
+usernamecache.json
