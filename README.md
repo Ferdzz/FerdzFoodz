@@ -25,5 +25,5 @@ Currently the mod holds the following food:
 - Corndog
 - Chicken pot pie
 
-# Curseforge post
+## Curseforge post
 (Not yet up)
