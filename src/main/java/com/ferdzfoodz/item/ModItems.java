@@ -1,4 +1,4 @@
-package com.ferdz.foodz.item;
+package com.ferdzfoodz.item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -6,14 +6,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 
-import com.ferdz.foodz.FerdzFoodz;
+import com.ferdzfoodz.FerdzFoodz;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems {
 	
 	public static Item knife;
-
+	
 	public static Item applePie;
 	
 	public static Item carrotJuice;
@@ -35,11 +35,23 @@ public class ModItems {
 	public static Item caramelApple;
 	
 	public static Item porkchopSandwich;
+	public static Item wholeBreakfast;
+	public static Item cookedEgg;
 	
+	public static Item baconRaw;
+	public static Item baconCooked;
+	
+	public static Item chocolateMilk;
+	public static Item hotChocolate;
+	
+	public static Item chipsRaw;
+	public static Item chipsCooked;
+	public static Item doritos;
+	public static Item corndog;
 	
 	public static void initItems() {
-		knife = new Item().setUnlocalizedName("ferdzKnife").setTextureName(FerdzFoodz.MODID + ":knife").setMaxStackSize(1);
-
+		knife = new ItemKnife().setUnlocalizedName("ferdzKnife").setTextureName(FerdzFoodz.MODID + ":knife").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabAllSearch);
+		
 		applePie = new ItemFood(8, 0.6F, false).setUnlocalizedName("applePie").setTextureName(FerdzFoodz.MODID + ":applePie").setCreativeTab(CreativeTabs.tabFood);
 		
 		carrotJuice = new ItemDrinkable(3, 0.8F).setUnlocalizedName("carrotJuice").setTextureName(FerdzFoodz.MODID + ":carrotJuice").setCreativeTab(CreativeTabs.tabFood);
@@ -47,7 +59,7 @@ public class ModItems {
 		watermelonJuice = new ItemDrinkable(3, 0.8F).setUnlocalizedName("watermelonJuice").setTextureName(FerdzFoodz.MODID + ":watermelonJuice").setCreativeTab(CreativeTabs.tabFood);
 		pumpkinJuice = new ItemDrinkable(3, 0.8F).setUnlocalizedName("pumpkinJuice").setTextureName(FerdzFoodz.MODID + ":pumpkinJuice").setCreativeTab(CreativeTabs.tabFood);
 		
-		fishAndChips = new ItemFood(3, 0.8F, false).setUnlocalizedName("fishAndChips").setTextureName(FerdzFoodz.MODID + ":fishAndChips").setCreativeTab(CreativeTabs.tabFood); //no recipe
+		fishAndChips = new ItemFood(3, 0.8F, false).setUnlocalizedName("fishAndChips").setTextureName(FerdzFoodz.MODID + ":fishAndChips").setCreativeTab(CreativeTabs.tabFood); // no recipe
 		chickenWingsRaw = new ItemFood(2, 0.5F, false).setUnlocalizedName("chickenWingsRaw").setTextureName(FerdzFoodz.MODID + ":chickenWingsRaw").setCreativeTab(CreativeTabs.tabFood);
 		chickenWingsCooked = new ItemFood(5, 1.0F, false).setUnlocalizedName("chickenWingsCooked").setTextureName(FerdzFoodz.MODID + ":chickenWingsCooked").setCreativeTab(CreativeTabs.tabFood);
 		chickenBreastRaw = new ItemFood(2, 0.5F, false).setUnlocalizedName("chickenBreastRaw").setTextureName(FerdzFoodz.MODID + ":chickenBreastRaw").setCreativeTab(CreativeTabs.tabFood);
@@ -61,7 +73,20 @@ public class ModItems {
 		caramelApple = new ItemFood(4, 0.6F, false).setUnlocalizedName("caramelApple").setTextureName(FerdzFoodz.MODID + ":caramelApple").setCreativeTab(CreativeTabs.tabFood);
 		
 		porkchopSandwich = new ItemFood(8, 1.2F, false).setUnlocalizedName("porkchopSandwich").setTextureName(FerdzFoodz.MODID + ":porkchopSandwich").setCreativeTab(CreativeTabs.tabFood);
-			
+		wholeBreakfast = new ItemFood(8, 1.2F, false).setUnlocalizedName("wholeBreakfast").setTextureName(FerdzFoodz.MODID + ":wholeBreakfast").setCreativeTab(CreativeTabs.tabFood);
+		cookedEgg = new ItemFood(2, 0.5F, false).setUnlocalizedName("cookedEgg").setTextureName(FerdzFoodz.MODID + ":cookedEgg").setCreativeTab(CreativeTabs.tabFood);
+		
+		baconRaw = new ItemFood(2, 0.4F, true).setUnlocalizedName("baconRaw").setTextureName(FerdzFoodz.MODID + ":baconRaw").setCreativeTab(CreativeTabs.tabFood);
+		baconCooked = new ItemFood(4, 0.6F, true).setUnlocalizedName("baconCooked").setTextureName(FerdzFoodz.MODID + ":baconCooked").setCreativeTab(CreativeTabs.tabFood);
+		
+		chocolateMilk = new ItemDrinkable(2, 0.5F).setUnlocalizedName("chocolateMilk").setTextureName(FerdzFoodz.MODID + ":chocolateMilk").setCreativeTab(CreativeTabs.tabFood);
+		hotChocolate = new ItemDrinkable(2, 0.6F).setUnlocalizedName("hotChocolate").setTextureName(FerdzFoodz.MODID + ":hotChocolate").setCreativeTab(CreativeTabs.tabFood);
+		
+		doritos = new ItemDoritos(4, 0.6F, true).setUnlocalizedName("doritos").setTextureName(FerdzFoodz.MODID + ":doritos").setCreativeTab(CreativeTabs.tabFood);
+		chipsRaw = new ItemDoritos(1, 0.2F, true).setUnlocalizedName("chipsRaw").setTextureName(FerdzFoodz.MODID + ":chipsRaw").setCreativeTab(CreativeTabs.tabFood);
+		chipsCooked = new ItemDoritos(2, 0.5F, true).setUnlocalizedName("chipsCooked").setTextureName(FerdzFoodz.MODID + ":chipsCooked").setCreativeTab(CreativeTabs.tabFood);
+		corndog = new ItemDoritos(5, 0.4F, true).setUnlocalizedName("corndog").setTextureName(FerdzFoodz.MODID + ":corndog").setCreativeTab(CreativeTabs.tabFood);
+		
 		/* Registery */
 		registerItem(knife);
 		
@@ -71,7 +96,7 @@ public class ModItems {
 		registerItem(appleJuice);
 		registerItem(watermelonJuice);
 		registerItem(pumpkinJuice);
-	
+		
 		registerItem(fishAndChips);
 		registerItem(chickenWingsRaw);
 		registerItem(chickenWingsCooked);
@@ -86,6 +111,19 @@ public class ModItems {
 		registerItem(caramelApple);
 		
 		registerItem(porkchopSandwich);
+		registerItem(wholeBreakfast);
+		registerItem(cookedEgg);
+		
+		registerItem(baconRaw);
+		registerItem(baconCooked);
+		
+		registerItem(chocolateMilk);
+		registerItem(hotChocolate);
+		
+		registerItem(doritos);
+		registerItem(chipsCooked);
+		registerItem(chipsRaw);
+		registerItem(corndog);
 	}
 	
 	public static void initCrafting() {
@@ -125,11 +163,42 @@ public class ModItems {
 			new ItemStack(Items.dye, 1, 3)
 		});
 		
+		GameRegistry.addShapelessRecipe(new ItemStack(chocolateMilk), new Object[] {
+			Items.milk_bucket,
+			new ItemStack(Items.dye, 1 ,3)
+		});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(wholeBreakfast), new Object[] {
+			cookedEgg,
+			new ItemStack(baconCooked, 2),
+			Items.bread
+		});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(doritos), new Object[] {
+			chipsCooked,
+			new ItemStack(Items.dye, 1, 14)
+		});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(chipsRaw), new Object[] {
+			Items.potato,
+			knife
+		});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(corndog), new Object[] {
+			Items.rotten_flesh,
+			Items.stick,
+			Items.bread
+		});
+		
 		/* Smelting */ 
 		addSmelting(chickenWingsRaw, chickenWingsCooked);
 		addSmelting(chickenBreastRaw,chickenBreastCooked);
 		addSmelting(chickenThighsRaw,chickenThighsCooked);
 		addSmelting(Items.sugar, caramel);
+		addSmelting(chocolateMilk, hotChocolate);
+		addSmelting(baconRaw, baconCooked);
+		addSmelting(Items.egg, cookedEgg);
+		addSmelting(chipsRaw, chipsCooked);
 	}
 	
 	private static void registerItem(Item item) {

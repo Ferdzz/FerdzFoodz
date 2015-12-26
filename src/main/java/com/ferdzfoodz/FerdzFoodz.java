@@ -1,6 +1,9 @@
-package com.ferdz.foodz;
+package com.ferdzfoodz;
 
-import com.ferdz.foodz.item.ModItems;
+import net.minecraftforge.common.MinecraftForge;
+
+import com.ferdzfoodz.handler.MobDropsHandler;
+import com.ferdzfoodz.item.ModItems;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -24,6 +27,7 @@ public class FerdzFoodz {
 		/* ====== INIT CRAFTING RECIPES ====== */
 		ModItems.initCrafting();
 		/* ======= INIT LISTENERS ======*/
+		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
 	}
 
 	@EventHandler

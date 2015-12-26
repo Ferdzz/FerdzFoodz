@@ -1,4 +1,4 @@
-package com.ferdz.foodz.item;
+package com.ferdzfoodz.item;
 
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemFood;
