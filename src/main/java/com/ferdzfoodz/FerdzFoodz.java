@@ -10,7 +10,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 
-@Mod(modid = FerdzFoodz.MODID, version = FerdzFoodz.VERSION)
+@Mod(modid = FerdzFoodz.MODID, version = FerdzFoodz.VERSION, name="ferdzfoodz")
 public class FerdzFoodz {
 	public static final String MODID = "ferdzfoodz";
 	public static final String VERSION = "1.0";
@@ -28,6 +28,8 @@ public class FerdzFoodz {
 		ModItems.initCrafting();
 		/* ======= INIT LISTENERS ======*/
 		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
+		
+		// TODO: Translate locale to fr_CA and fr_FR
 	}
 
 	@EventHandler
